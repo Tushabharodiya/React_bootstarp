@@ -1,0 +1,47 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+{
+            tips.map((val, ind) => {
+              return (
+                <div className="travel-time">
+                  <div className="row">
+                    <div className="col-lg-6">
+                      <div className="travel-info position-relative">
+                        <div className="travel-img">
+                          <img src={val.img} alt="travel image" />
+                        </div>
+                        <div className="card-tol position-absolute">
+                          <span className="d-inline-block"><i class="fa-solid fa-pen me-2"></i>vacation</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-lg-6">
+                      <Travel date={val.date} title={val.title} />
+                    </div>
+                  </div>
+                </div>
+              )
+            })
+          }
